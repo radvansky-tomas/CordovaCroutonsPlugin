@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-croutons-plugin"
+        version="1.0.0">
+    <name>Cordova Croutons Plugin</name>
+    <description>Cordova Plugin allowing to show croutons notifications.</description>
+    <license>MIT</license>
+    <keywords>ios, android, cordova, plugin, indicator</keywords>
+    <repo>https://github.com/radvansky-tomas/CordovaCroutonsPlugin.git</repo>
+    <issue>https://github.com/radvansky-tomas/CordovaCroutonsPlugin/issues</issue>
+
+    <dependency id="cordova-plugin-add-swift-support" version="1.6.1"/>
+    <dependency id="cordova-plugin-cocoapod-support"/>
+
+    <js-module name="CordovaCroutonsPlugin" src="www/plugin.js">
+        <clobbers target="CordovaCroutonsPlugin" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CordovaCroutonsPlugin">
+                <param name="android-package" value="com.cordova.plugins.CordovaCroutonsPlugin"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <framework src="de.keyboardsurfer.android.widget:crouton:1.8.5@aar" />
+        <source-file src="src/android/com/cordova/plugins/CordovaCroutonsPlugin.java"
+                     target-dir="src/com/cordova/plugins/"/>
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CordovaCroutonsPlugin">
+                <param name="ios-package" value="CordovaCroutonsPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/CordovaCroutonsPlugin.swift"/>
+        <pods-config ios-min-version="9.0" use-frameworks="true">
+        </pods-config>
+        <pod id="SwiftMessages"/>
+    </platform>
+</plugin>
