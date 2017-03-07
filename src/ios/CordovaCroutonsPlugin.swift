@@ -1,9 +1,8 @@
 import UIKit
-import SVProgressHUD
 
 @objc(CordovaCroutonsPlugin) class CordovaCroutonsPlugin : CDVPlugin {
-    @objc(show:)
-    func show(command: CDVInvokedUrlCommand) {
+    @objc(showAlert:)
+    func showAlert(command: CDVInvokedUrlCommand) {
         let pluginResult = CDVPluginResult(
             status: CDVCommandStatus_OK
         )
@@ -27,8 +26,58 @@ import SVProgressHUD
         )
     }
 
-    @objc(hide:)
-    func hide(command: CDVInvokedUrlCommand) {
+    @objc(showConfirm:)
+    func showConfirm(command: CDVInvokedUrlCommand) {
+        let pluginResult = CDVPluginResult(
+            status: CDVCommandStatus_OK
+        )
+        //Disable interaction
+        SVProgressHUD.setDefaultMaskType(.black)
+
+        let msg = command.arguments[0] as? String ?? ""
+
+        if msg.characters.count == 0{
+            SVProgressHUD.show()
+
+        }
+        else
+        {
+            SVProgressHUD.show(withStatus: msg)
+        }
+
+        self.commandDelegate!.send(
+            pluginResult,
+            callbackId: command.callbackId
+        )
+    }
+
+    @objc(showInfo:)
+    func showInfo(command: CDVInvokedUrlCommand) {
+        let pluginResult = CDVPluginResult(
+            status: CDVCommandStatus_OK
+        )
+        //Disable interaction
+        SVProgressHUD.setDefaultMaskType(.black)
+
+        let msg = command.arguments[0] as? String ?? ""
+
+        if msg.characters.count == 0{
+            SVProgressHUD.show()
+
+        }
+        else
+        {
+            SVProgressHUD.show(withStatus: msg)
+        }
+
+        self.commandDelegate!.send(
+            pluginResult,
+            callbackId: command.callbackId
+        )
+    }
+
+    @objc(cancelAll:)
+    func cancelAll(command: CDVInvokedUrlCommand) {
         let pluginResult = CDVPluginResult(
             status: CDVCommandStatus_OK
         )
@@ -40,13 +89,4 @@ import SVProgressHUD
             callbackId: command.callbackId
         )
     }
-
-      @objc(isShown:)
-        func isShown(command: CDVInvokedUrlCommand) {
-            self.commandDelegate!.send(
-                CDVPluginResult.init(status: CDVCommandStatus_OK, messageAs: SVProgressHUD.isVisible()),
-                callbackId: command.callbackId
-            )
-        }
-
 }
