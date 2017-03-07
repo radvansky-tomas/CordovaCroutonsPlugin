@@ -10,6 +10,7 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import android.app.Activity;
 import android.util.Log;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
@@ -29,11 +30,18 @@ public class CordovaCroutonsPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
 
         if (action.equals("showAlert")) {
-            String message = args.getString(0);
+            final String message = args.getString(0);
 
             if (message != null) {
                 if (!message.isEmpty()) {
-                    Crouton.makeText(this.cordova.getActivity(), message, Style.ALERT).show();
+                    final Activity cordovaActvity = this.cordova.getActivity();
+                    cordovaActvity.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Crouton.makeText(cordovaActvity, message, Style.ALERT).show();
+                        }
+                    });
+
                     final PluginResult result = new PluginResult(PluginResult.Status.OK);
                     callbackContext.sendPluginResult(result);
                     return true;
@@ -44,11 +52,18 @@ public class CordovaCroutonsPlugin extends CordovaPlugin {
             callbackContext.sendPluginResult(result);
 
         } else if (action.equals("showConfirm")) {
-            String message = args.getString(0);
+            final String message = args.getString(0);
 
             if (message != null) {
                 if (!message.isEmpty()) {
-                    Crouton.makeText(this.cordova.getActivity(), message, Style.CONFIRM).show();
+                    final Activity cordovaActvity = this.cordova.getActivity();
+                    cordovaActvity.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Crouton.makeText(cordovaActvity, message, Style.CONFIRM).show();
+                        }
+                    });
+
                     final PluginResult result = new PluginResult(PluginResult.Status.OK);
                     callbackContext.sendPluginResult(result);
                     return true;
@@ -58,11 +73,18 @@ public class CordovaCroutonsPlugin extends CordovaPlugin {
             final PluginResult result = new PluginResult(PluginResult.Status.ERROR, "Invalid Message");
             callbackContext.sendPluginResult(result);
         } else if (action.equals("showInfo")) {
-            String message = args.getString(0);
+            final String message = args.getString(0);
 
             if (message != null) {
                 if (!message.isEmpty()) {
-                    Crouton.makeText(this.cordova.getActivity(), message, Style.INFO).show();
+                    final Activity cordovaActvity = this.cordova.getActivity();
+                    cordovaActvity.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Crouton.makeText(cordovaActvity, message, Style.INFO).show();
+                        }
+                    });
+
                     final PluginResult result = new PluginResult(PluginResult.Status.OK);
                     callbackContext.sendPluginResult(result);
                     return true;
@@ -72,7 +94,13 @@ public class CordovaCroutonsPlugin extends CordovaPlugin {
             final PluginResult result = new PluginResult(PluginResult.Status.ERROR, "Invalid Message");
             callbackContext.sendPluginResult(result);
         } else if (action.equals("cancelAll")) {
-            Crouton.cancelAllCroutons();
+            final Activity cordovaActvity = this.cordova.getActivity();
+            cordovaActvity.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Crouton.cancelAllCroutons();
+                }
+            });
             final PluginResult result = new PluginResult(PluginResult.Status.OK);
             callbackContext.sendPluginResult(result);
         }
