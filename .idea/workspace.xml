@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95d7c1d0-3897-49df-a19b-ae47ab4dd4b3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/www/templates/browse.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/www/templates/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/www/templates/playlists.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/www/templates/search.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/www/js/app.js" afterPath="$PROJECT_DIR$/demo/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/www/js/controllers.js" afterPath="$PROJECT_DIR$/demo/www/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/www/templates/menu.html" afterPath="$PROJECT_DIR$/demo/www/templates/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/www/templates/playlist.html" afterPath="$PROJECT_DIR$/demo/www/templates/playlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/com/cordova/plugins/CordovaCroutonsPlugin.java" afterPath="$PROJECT_DIR$/src/android/com/cordova/plugins/CordovaCroutonsPlugin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ios/CordovaCroutonsPlugin.swift" afterPath="$PROJECT_DIR$/src/ios/CordovaCroutonsPlugin.swift" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,12 +36,12 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/plugin.xml" />
         <option value="$PROJECT_DIR$/www/plugin.js" />
-        <option value="$PROJECT_DIR$/src/ios/CordovaCroutonsPlugin.swift" />
-        <option value="$PROJECT_DIR$/src/android/com/cordova/plugins/CordovaCroutonsPlugin.java" />
         <option value="$PROJECT_DIR$/demo/www/js/app.js" />
         <option value="$PROJECT_DIR$/demo/www/templates/menu.html" />
         <option value="$PROJECT_DIR$/demo/www/templates/playlist.html" />
         <option value="$PROJECT_DIR$/demo/www/js/controllers.js" />
+        <option value="$PROJECT_DIR$/src/android/com/cordova/plugins/CordovaCroutonsPlugin.java" />
+        <option value="$PROJECT_DIR$/src/ios/CordovaCroutonsPlugin.swift" />
       </list>
     </option>
   </component>
@@ -248,28 +240,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CordovaCroutonsPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CordovaCroutonsPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="platforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -350,12 +320,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1488883619752</updated>
-      <workItem from="1488883621128" duration="3375000" />
+      <workItem from="1488883621128" duration="4385000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3375000" />
+    <option name="totallyTimeSpent" value="4385000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1610" height="936" extended-state="0" />
@@ -423,26 +393,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ios/CordovaCroutonsPlugin.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -479,18 +433,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/com/cordova/plugins/CordovaCroutonsPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ios/CordovaCroutonsPlugin.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="127" column="1" lean-forward="false" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/com/cordova/plugins/CordovaCroutonsPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="77" column="15" lean-forward="false" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
           <folding />
         </state>
       </provider>
